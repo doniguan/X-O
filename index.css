@@ -5,8 +5,9 @@ h2 {
 .cell {
     width: 75px;
     height: 75px;
-    font-size: 30px;
-    line-height: 50px;
+    font-family: 'Arial';
+    font-size: 40px;
+    line-height: 70px;
     text-align: center;
     text-transform: uppercase;
     border: 1px solid #333;
@@ -22,25 +23,24 @@ table {
     margin: 0 auto;
 }
 
-#win_block {
+#win_message {
     display: none;
     text-align: center;
     padding-top: 20px;
-    font-size: 20px;
+    font-size: 40px;
 }
 
-#win_block .again {
+#win_message .againBtn {
     font-weight: bold;
     cursor: pointer;
     color: #369;
     border-bottom: 1px solid #369;
 }
 
-#win_block .again:hover {
+#win_message .againBtn:hover {
     border-color: transparent;
 
 }
-
 
 #field {
     position: relative;
@@ -51,17 +51,6 @@ table {
 
     margin: 0 auto;
     position: relative;
-}
-
-#field .table .winning {
-    display: none;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 200, 0, 0.5);
-
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 
 #field table tr:first-child div {
