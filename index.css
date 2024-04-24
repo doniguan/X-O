@@ -30,16 +30,17 @@ table {
     font-size: 40px;
 }
 
-#win_message .againBtn {
+#again {
+    display: none;
+    font-size: 40px;
     font-weight: bold;
     cursor: pointer;
     color: #369;
-    border-bottom: 1px solid #369;
+    text-align: center;
 }
 
-#win_message .againBtn:hover {
-    border-color: transparent;
-
+#again:hover {
+    font-size: 45px;
 }
 
 #field {

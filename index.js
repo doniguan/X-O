@@ -1,15 +1,14 @@
-//дописать показ предложения играть снова
-//дописать возможность повторной игры
-
 let firstMoveIsHuman = false
 let winnerFound = false
 let cells = []
 let humanIcon = 'O'
 let computerIcon = 'X'
 let resultMessage
+let again
 
 onload = function () {
   resultMessage = document.getElementById('win_message')
+  again = document.getElementById('again')
 
   const random = Math.floor(Math.random() * 2) + 1
   if (random === 1) {
@@ -25,6 +24,25 @@ onload = function () {
       humanMove(this)
     })
   }
+
+  again.addEventListener('click', function () {
+    resultMessage.style.display = 'none'
+    again.style.display = 'none'
+    clearTable()
+    humanIcon = 'O'
+    computerIcon = 'X'
+    firstMoveIsHuman = false
+    const random = Math.floor(Math.random() * 2) + 1
+    if (random === 1) {
+      firstMoveIsHuman = true
+      humanIcon = 'X'
+      computerIcon = 'O'
+    }
+
+    if (!firstMoveIsHuman) {
+      computerMove()
+    }
+  })
 
   if (!firstMoveIsHuman) {
     computerMove()
@@ -129,7 +147,7 @@ winChk = function () {
 
 winShowing = function () {
   resultMessage.style.display = 'block'
-
+  again.style.display = 'block'
   if (winnerIsHuman) {
     resultMessage.innerHTML = 'Вы выиграли!'
     resultMessage.style.color = 'green'
@@ -143,4 +161,11 @@ drawShowing = function () {
   resultMessage.innerHTML = 'Ничья :|'
   resultMessage.style.color = 'blue'
   resultMessage.style.display = 'block'
+  again.style.display = 'block'
+}
+
+clearTable = function () {
+  for (let i = 0; i < cells.length; i++) {
+    cells[i].innerHTML = ''
+  }
 }
