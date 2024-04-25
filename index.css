@@ -1,11 +1,15 @@
 h2 {
     text-align: center;
+    font-size: 70px;
+    font-family: 'Paralines-Regular';
+    font-weight:100;
+    color: green;
 }
 
 .cell {
     width: 75px;
     height: 75px;
-    font-family: 'Arial';
+    font-family: 'Paralines-Regular';
     font-size: 40px;
     line-height: 70px;
     text-align: center;
@@ -49,7 +53,6 @@ table {
 
 #field .table {
     display: table;
-
     margin: 0 auto;
     position: relative;
 }
@@ -68,4 +71,11 @@ table {
 
 #field table tr td:last-child div {
     margin-right: 0;
+}
+
+@font-face {
+    font-family: 'Paralines-Regular';
+    src: url('./font/Paralines-Regular.otf');
+    font-weight: 400;
+    font-style: normal;
 }
