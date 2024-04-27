@@ -159,8 +159,8 @@ winShowing = function () {
 }
 
 drawShowing = function () {
-  resultMessage.innerHTML = 'Draw :|'
-  resultMessage.style.color = 'blue'
+  resultMessage.innerHTML = 'Draw.'
+  resultMessage.style.color = '#369'
   resultMessage.style.display = 'block'
   again.style.display = 'block'
 }
