@@ -49,7 +49,7 @@ onload = function () {
   }
 }
 
-humanMove = function (item) {
+function humanMove (item) {
   if (item.hasChildNodes()) {
     return false
   }
@@ -72,7 +72,7 @@ humanMove = function (item) {
   }
 }
 
-computerMove = function () {
+function computerMove () {
   while (true) {
     if (checkFreeSpace()) {
       const random = Math.floor(Math.random() * 9)
@@ -87,7 +87,7 @@ computerMove = function () {
   }
 }
 
-checkFreeSpace = function () {
+function checkFreeSpace () {
   for (let i = 0; i < cells.length; i++) {
     if (!cells[i].hasChildNodes()) {
       return true
@@ -96,7 +96,7 @@ checkFreeSpace = function () {
   return false
 }
 
-winnerChk = function (item) {
+function winnerChk (item) {
   if (item.innerHTML === humanIcon) {
     return true
   } else {
@@ -104,7 +104,7 @@ winnerChk = function (item) {
   }
 }
 
-winChk = function () {
+function winChk () {
   if (
     ((cells[0].innerHTML === cells[4].innerHTML &&
       cells[4].innerHTML === cells[8].innerHTML) ||
@@ -146,7 +146,7 @@ winChk = function () {
   }
 }
 
-winShowing = function () {
+function winShowing () {
   resultMessage.style.display = 'block'
   again.style.display = 'block'
   if (winnerIsHuman) {
@@ -158,14 +158,14 @@ winShowing = function () {
   }
 }
 
-drawShowing = function () {
+function drawShowing () {
   resultMessage.innerHTML = 'Draw.'
   resultMessage.style.color = '#369'
   resultMessage.style.display = 'block'
   again.style.display = 'block'
 }
 
-clearTable = function () {
+function clearTable () {
   for (let i = 0; i < cells.length; i++) {
     cells[i].innerHTML = ''
     cells[i].style.color = 'red'
